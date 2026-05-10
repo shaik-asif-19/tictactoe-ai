@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.status {
+    margin-bottom: 30px;
+}
+
+#status {
+    font-size: 1.3rem;
+    color: #667eea;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#winner {
+    font-size: 1.5rem;
+    color: #28a745;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 30px auto;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.cell:hover:not(:disabled) {
+    background: #f9f9f9;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+}
+
+.cell[data-player="X"] {
+    color: #667eea;
+}
+
+.cell[data-player="O"] {
+    color: #764ba2;
+}
+
+.reset-btn {
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+}
